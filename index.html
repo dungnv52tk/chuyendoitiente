@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="width:40%">
+    <tr>
+        <th>Amount<form><input type="text" id="amount"></form></th>
+        <th>From Currency
+            <select>
+                <option value="vietnam">VietNamDong</option>
+                <option value="usd">USD</option>
+            </select>
+        </th>
+        <th>To Currency
+        <select>
+            <option value="vietnam1">USD</option>
+            <option value="usd1">VietNamDong</option>
+        </select>
+        </th>
+        <th>
+            <button type="button" onclick = "vndtousd()">Convert</button>
+            <button type="button" onclick ="usdtovnd()">Convert</button>
+        </th>
+    </tr>
+</table>
+
+</body>
+<p id="kq"></p>
+<script>
+    function vndtousd() {
+        let a = parseInt(document.getElementById("amount").value);
+        let b = parseInt(document.getElementById("amount").value);
+        a = b / 23000;
+        document.getElementById("kq").innerHTML =a;
+    }
+    function usdtovnd() {
+        let a = parseInt(document.getElementById("amount").value);
+        let b = parseInt(document.getElementById("amount").value);
+        a = 23000*b;
+        document.getElementById("kq").innerHTML =a;
+    }
+
+
+</script>
+</body>
+</html>
